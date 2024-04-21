@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>对比段落选择</title>
+</head>
+<body>
+<h1>请输入你要对比的段落</h1>
+<table>
+    <form th:action="@{/duibi}">
+        <tr>
+            <th>文档一</th>
+            <td><input type="text" name="yi"></td>
+        </tr>
+        <tr>
+            <th>文档二</th>
+            <td><input type="text" name="er"></td>
+        </tr>
+        <tr>
+            <th>提交</th>
+            <td><input type="submit" value="提交"></td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>

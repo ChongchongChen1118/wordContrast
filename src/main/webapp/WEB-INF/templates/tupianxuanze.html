@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图片选择</title>
+</head>
+<body>
+<h1>请输入你要对比图片存入的文件夹</h1>
+<table>
+    <form th:action="@{/tupianduibi}">
+        <tr>
+            <th>请输入输出图片的文件夹1名称：</th>
+            <td><input type="text" name="yi"></td>
+        </tr>
+        <tr>
+            <th>请输入输出图片的文件夹1名称：</th>
+            <td><input type="text" name="er"></td>
+        </tr>
+        <tr>
+            <th>提交</th>
+            <td><input type="submit" value="提交"></td>
+        </tr>
+    </form>
+</table>
+</body>
+</html>

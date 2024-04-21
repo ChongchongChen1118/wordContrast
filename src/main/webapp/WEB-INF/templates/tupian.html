@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>对比图片</title>
+</head>
+<style>
+    .a {
+        width: max-content;
+        overflow: auto;
+    }
+
+    .b {
+        float: left;
+    }
+
+    .c {
+        float: left;
+    }
+</style>
+<body>
+<div class="a">
+    <div class="b">
+        <table border="1px">
+            <tr>
+                <th>文档一</th>
+            </tr>
+            <tr th:each="a:${yi}">
+                <td th:text="${a}"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="c">
+        <table border="1px">
+            <tr>
+                <th>文档二</th>
+            </tr>
+            <tr th:each="b:${er}">
+                <td th:text="${b}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

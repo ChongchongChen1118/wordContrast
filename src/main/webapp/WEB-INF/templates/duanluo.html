@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>根据段落对比</title>
+</head>
+<style>
+    .a {
+        width: max-content;
+        overflow: auto;
+    }
+
+    .b {
+        float: left;
+    }
+
+    .c {
+        float: left;
+    }
+</style>
+<body>
+<div class="a">
+    <div class="b">
+        <table border="1px">
+            <tr>
+                <th>序号</th>
+                <th>文字</th>
+                <th>字体</th>
+                <th>大小</th>
+                <th>加粗</th>
+                <th>倾斜</th>
+                <th>下划线</th>
+                <th>删除线</th>
+                <th>字体颜色</th>
+                <th>高亮颜色</th>
+                <th>背景颜色</th>
+            </tr>
+            <tr th:each="a:${quanbu1}">
+                <th th:text="${aStat.index+1}"></th>
+                <td th:text="${a.wenzi}"></td>
+                <td th:text="${a.ziti}"></td>
+                <td th:text="${a.daxiao}"></td>
+                <td th:text="${a.jaicu}"></td>
+                <td th:text="${a.qingxie}"></td>
+                <td th:text="${a.xiahuaxian}"></td>
+                <td th:text="${a.shanchuxian}"></td>
+                <td th:text="${a.zitiyanse}"></td>
+                <td th:text="${a.gaoliang}"></td>
+                <td th:text="${a.beijingyanse}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="c">
+        <table border="1px">
+            <tr>
+                <th>序号</th>
+                <th>文字</th>
+                <th>字体</th>
+                <th>大小</th>
+                <th>加粗</th>
+                <th>倾斜</th>
+                <th>下划线</th>
+                <th>删除线</th>
+                <th>字体颜色</th>
+                <th>高亮颜色</th>
+                <th>背景颜色</th>
+            </tr>
+            <tr th:each="b:${quanbu2}">
+                <th th:text="${bStat.index+1}"></th>
+                <td th:text="${b.wenzi}"></td>
+                <td th:text="${b.ziti}"></td>
+                <td th:text="${b.daxiao}"></td>
+                <td th:text="${b.jaicu}"></td>
+                <td th:text="${b.qingxie}"></td>
+                <td th:text="${b.xiahuaxian}"></td>
+                <td th:text="${b.shanchuxian}"></td>
+                <td th:text="${b.zitiyanse}"></td>
+                <td th:text="${b.gaoliang}"></td>
+                <td th:text="${b.beijingyanse}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>选择第二个文件</title>
+</head>
+<body>
+<h1>选择第二个文件</h1>
+<br>
+<form th:action="@{/zhuye2}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file2"/>
+    <br><br>
+    <input type="submit" value="对比"/>
+</form>
+</body>
+</html>
